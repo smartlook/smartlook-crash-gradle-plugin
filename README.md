@@ -1,0 +1,1 @@
+# smartlook-crash-gradle-plugin
