@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.tools.build:apkzlib:4.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/4.2.0/49cb407f13ef01fa8b6c21b4429b2f876767f68e/apkzlib-4.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/4.2.0/ac1d8d798cb4bd7325d32c56574b323389e9349f/apkzlib-4.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

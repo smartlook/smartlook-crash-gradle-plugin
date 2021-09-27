@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: groovy-json-3.0.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-7.1.1-bin/f29rtwfnc96ub43tt7p47zsru/gradle-7.1.1/lib/groovy-json-3.0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-json/3.0.7/45767ecdadf4257c2939c869a981a0e247f60b38/groovy-json-3.0.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

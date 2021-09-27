@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: groovy-groovydoc-3.0.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-7.1.1-bin/f29rtwfnc96ub43tt7p47zsru/gradle-7.1.1/lib/groovy-groovydoc-3.0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-groovydoc/3.0.7/b331740859ebea67a87b1bea29f7202dd1ee7aca/groovy-groovydoc-3.0.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

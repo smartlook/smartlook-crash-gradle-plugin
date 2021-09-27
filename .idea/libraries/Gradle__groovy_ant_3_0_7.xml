@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: groovy-ant-3.0.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-7.1.1-bin/f29rtwfnc96ub43tt7p47zsru/gradle-7.1.1/lib/groovy-ant-3.0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-ant/3.0.7/4fc85ac8f54564ba61a7ccfc91815ed304641440/groovy-ant-3.0.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

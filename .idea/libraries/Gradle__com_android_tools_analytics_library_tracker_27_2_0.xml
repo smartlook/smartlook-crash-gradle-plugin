@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.tools.analytics-library:tracker:27.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/27.2.0/52946983ba7136bb94ba0e99eb7fbbe78a1a5b17/tracker-27.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/27.2.0/c6d35bc4e5dcfe92d6afb7c97c342b8b7881319a/tracker-27.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
