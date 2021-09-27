@@ -43,8 +43,8 @@ fun uploadFile(apiKey: String, appVersion: String, file: File) {
     val message = connection.responseMessage
 
     if(responseCode >= 400) {
-        throw Exception("> SmartLook Plugin: Upload has failed! Build cycle unsuccessful! STATUS: $responseCode, MESSAGE: '$message'")
+        throw Exception("> Smartlook Plugin: Upload has failed! Build cycle unsuccessful! STATUS: $responseCode, MESSAGE: '$message'")
     }
 
-    println("> SmartLook Plugin: STATUS: $responseCode, MESSAGE: '$message'")
+    println("> Smartlook Plugin: STATUS: $responseCode, MESSAGE: '$message'")
 }

@@ -1,12 +1,12 @@
-# SmartLook Crash Map Plugin
+# Smartlook Crash Gradle Plugin
 
-The SmartLook Crash Map Plugin is a Gradle/Maven dependency, which will automatically find the mappings of all your build types and upload them.
+The Smartlook Crash Gradle Plugin is a Gradle/Maven dependency, which will automatically find the mappings of all your build types and upload them.
 The plugin hooks on to the build phase of your application, and if the `minifyEnabled` property of the specific build type is set to `true`,
 then the plugin mapping will be available for the plugin to grab & upload.
 
 **Expected behaviour:**
 If the upload fails, then a checked exception is thrown to fail the entire build phase. This is to ensure that no mappings are missing if the upload
-to the SmartLook Crash API fails.
+to the Smartlook Crash API fails.
 
 ## Usage of the plugin via Gradle
 
@@ -28,7 +28,7 @@ android {
 }
 ```
 
-Include the SmartLook Crash Map plugin into your `build.gradle` file as a plugin along with its optional version:
+Include the Smartlook Crash Gradle ID `com.smartlook.crash-gradle-plugin` into your `build.gradle` file as a plugin along with its optional version:
 
 ```groovy
 plugins {
@@ -38,7 +38,7 @@ plugins {
 }
 ```
 
-In the same `build.gradle` file, define the configuration for the plugin and include in your SmartLook API key:
+In the same `build.gradle` file, define the configuration for the plugin and include in your Smartlook API key:
 
 ```groovy
 smartlookCrashGradlePlugin {

@@ -25,21 +25,21 @@ class SmartlookUploadPlugin : Plugin<Project> {
             project.pluginManager.withPlugin("com.android.application") {
                 val androidExtension = project.extensions.getByType(AppExtension::class.java)
 
-                println("> SmartLook Plugin: Compile SDK Version: ${androidExtension.compileSdkVersion}")
-                println("> SmartLook Plugin: Application Variants: ${androidExtension.applicationVariants}")
-                println("> SmartLook Plugin: Build Type Count: ${androidExtension.buildTypes.size}")
+                println("> Smartlook Plugin: Compile SDK Version: ${androidExtension.compileSdkVersion}")
+                println("> Smartlook Plugin: Application Variants: ${androidExtension.applicationVariants}")
+                println("> Smartlook Plugin: Build Type Count: ${androidExtension.buildTypes.size}")
 
                 androidExtension.applicationVariants.all { applicationVariant ->
                     val appVariantName = applicationVariant.name
                     val minifiedEnabled = applicationVariant.buildType.isMinifyEnabled
                     val versionName = applicationVariant.versionName
 
-                    println("> SmartLook Plugin: App variant: $appVariantName, minifyEnabled: $minifiedEnabled")
+                    println("> Smartlook Plugin: App variant: $appVariantName, minifyEnabled: $minifiedEnabled")
 
                     if (minifiedEnabled) {
                         val mappings = applicationVariant.mappingFileProvider.get()
                         val tasks = project.getTasksByName("minify${appVariantName.capitalize()}WithR8", true)
-                        println("> SmartLook Plugin: Minification Task Found: $tasks")
+                        println("> Smartlook Plugin: Minification Task Found: $tasks")
 
                         val uploadTask = project.tasks.register(
                             "uploadTask${appVariantName.capitalize()}",
@@ -49,7 +49,7 @@ class SmartlookUploadPlugin : Plugin<Project> {
                         )
 
                         tasks.forEach { task ->
-                            println("> SmartLook Plugin: Setting finalized by: ${uploadTask.name}")
+                            println("> Smartlook Plugin: Setting finalized by: ${uploadTask.name}")
                             task.finalizedBy(uploadTask)
                         }
 
@@ -68,7 +68,7 @@ open class UploadTask @Inject constructor(@InputFile val inputFile: File, privat
     @TaskAction
     fun execute() {
         val extension = project.extensions.findByName(EXTENSION_NAME) as SmartlookUploadPluginConfig
-        println("> SmartLook Plugin: Uploading ${inputFile.path} to SmartLook Crash API")
+        println("> Smartlook Plugin: Uploading ${inputFile.path} to Smartlook Crash API")
         uploadFile(extension.apiKey.get(), versionName, inputFile)
     }
 }
