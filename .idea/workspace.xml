@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84160133-a317-4893-8b14-6560c2f3d954" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gradle-example.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/smartlook/plugins/src/SmartlookUploadPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/smartlook/plugins/src/SmartlookUploadPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/smartlook/plugins/src/Uploader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/smartlook/plugins/src/Uploader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,11 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="smartlook-crash-gradle-plugin" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="smartlook-crash-gradle-plugin" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -71,13 +76,14 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradlew build" />
-      <command value="gradle build" />
       <command value="gradle " />
       <command value="gradlew build --refresh-dependencies" />
       <command value="gradle publishToMavenLocal" />
+      <command value="gradle uploadArchives" />
+      <command value="gradle build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.smartlook-crash-gradle-plugin [publishToMavenLocal]">
+  <component name="RunManager" selected="Gradle.upload_plugin [publishToMavenLocal]">
     <configuration name="smartlook-crash-gradle-plugin [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -120,7 +126,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="upload_plugin [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="smartlook-crash-gradle-plugin [uploadArchives]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -131,7 +137,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="uploadArchives" />
           </list>
         </option>
         <option name="vmOptions" value="" />
@@ -183,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.smartlook-crash-gradle-plugin [build]" />
-        <item itemvalue="Gradle.smartlook-crash-gradle-plugin [publishToMavenLocal]" />
-        <item itemvalue="Gradle.upload_plugin" />
         <item itemvalue="Gradle.upload_plugin [publishToMavenLocal]" />
-        <item itemvalue="Gradle.upload_plugin [build]" />
+        <item itemvalue="Gradle.upload_plugin" />
+        <item itemvalue="Gradle.smartlook-crash-gradle-plugin [build]" />
+        <item itemvalue="Gradle.smartlook-crash-gradle-plugin [uploadArchives]" />
+        <item itemvalue="Gradle.smartlook-crash-gradle-plugin [publishToMavenLocal]" />
       </list>
     </recent_temporary>
   </component>

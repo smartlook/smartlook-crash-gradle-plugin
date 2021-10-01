@@ -6,6 +6,7 @@ build
 
 # properties files
 local.properties
+gradle.properties
 
 # misc
 .DS_Store
