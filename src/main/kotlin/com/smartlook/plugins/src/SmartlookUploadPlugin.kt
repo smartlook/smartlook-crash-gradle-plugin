@@ -14,6 +14,7 @@ const val EXTENSION_NAME = "smartlookCrashGradlePlugin"
 
 interface SmartlookUploadPluginConfig {
     val apiKey: Property<String>
+    val force: Property<Boolean>
 }
 
 class SmartlookUploadPlugin : Plugin<Project> {
@@ -69,6 +70,6 @@ open class UploadTask @Inject constructor(@InputFile val inputFile: File, privat
     fun execute() {
         val extension = project.extensions.findByName(EXTENSION_NAME) as SmartlookUploadPluginConfig
         println("> Smartlook Plugin: Uploading ${inputFile.path} to Smartlook Crash API")
-        uploadFile(extension.apiKey.get(), versionName, inputFile)
+        uploadFile(extension.apiKey.get(), versionName, inputFile, extension.force.get())
     }
 }

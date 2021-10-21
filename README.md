@@ -43,6 +43,7 @@ In the same `build.gradle` file, define the configuration for the plugin and inc
 ```groovy
 smartlookCrashGradlePlugin {
     apiKey = "your-smartlook-api-key"
+    force = true // or false
 }
 ```
 

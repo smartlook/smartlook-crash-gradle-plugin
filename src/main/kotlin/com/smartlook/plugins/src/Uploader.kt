@@ -8,14 +8,13 @@ import java.net.URL
 import java.nio.file.Files
 
 // Source: https://stackoverflow.com/questions/2469451/upload-files-from-java-client-to-a-http-server
-fun uploadFile(apiKey: String, appVersion: String, file: File) {
+fun uploadFile(apiKey: String, appVersion: String, file: File, force: Boolean) {
     val charset = "UTF-8"
     // encode the appVersion for URL string sanitation
     val encodedEndpoint = java.net.URLEncoder.encode(appVersion, charset)
     val boundary = java.lang.Long.toHexString(System.currentTimeMillis()) // Just generate some unique random value.
     val CRLF = "\r\n" // Line separator required by multipart/form-data.
-    // @To-Do: The URL & endpoint is not yet available at the time of this commit - this may need adjustment
-    val connection = URL("https://api.smartlook.com/releases/$encodedEndpoint/mapping-files").openConnection()
+    val connection = URL("https://api.smartlook.cloud/api/v1/releases/$encodedEndpoint/mapping-files?force=$force").openConnection()
 
     connection.doOutput = true
     connection.setRequestProperty("Content-Type", "multipart/form-data; boundary=$boundary")
@@ -25,7 +24,7 @@ fun uploadFile(apiKey: String, appVersion: String, file: File) {
         PrintWriter(OutputStreamWriter(output, charset), true).use { writer ->
             // Send text file.
             writer.append("--$boundary").append(CRLF)
-            writer.append("Content-Disposition: form-data; name=\"textFile\"; filename=\"" + file.name + "\"")
+            writer.append("Content-Disposition: form-data; name=\"mappingFile\"; filename=\"" + file.name + "\"")
                 .append(CRLF)
             writer.append("Content-Type: text/plain; charset=$charset")
                 .append(CRLF) // Text file itself must be saved in this charset!

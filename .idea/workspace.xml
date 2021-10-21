@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84160133-a317-4893-8b14-6560c2f3d954" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gradle-example.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/smartlook/plugins/src/SmartlookUploadPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/smartlook/plugins/src/SmartlookUploadPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/smartlook/plugins/src/Uploader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/smartlook/plugins/src/Uploader.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
