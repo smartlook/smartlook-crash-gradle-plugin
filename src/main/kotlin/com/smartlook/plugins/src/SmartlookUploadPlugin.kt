@@ -69,7 +69,8 @@ open class UploadTask @Inject constructor(@InputFile val inputFile: File, privat
     @TaskAction
     fun execute() {
         val extension = project.extensions.findByName(EXTENSION_NAME) as SmartlookUploadPluginConfig
+        val platform = "android"
         println("> Smartlook Plugin: Uploading ${inputFile.path} to Smartlook Crash API")
-        uploadFile(extension.apiKey.get(), versionName, inputFile, extension.force.get())
+        uploadFile(extension.apiKey.get(), versionName, platform, inputFile, extension.force.get())
     }
 }
