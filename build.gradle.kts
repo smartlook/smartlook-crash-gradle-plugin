@@ -61,11 +61,10 @@ publishing {
         description.set("The Smartlook Crash Gradle Plugin will automatically find the mappings of all your build types and upload them.")
         url.set("https://www.smartlook.com/")
 
-        // @To-Do: Define the licenses properly
         licenses {
           license {
-            name.set("...")
-            url.set("...")
+            name.set("MIT")
+            url.set("http://opensource.org/licenses/MIT")
           }
         }
 
