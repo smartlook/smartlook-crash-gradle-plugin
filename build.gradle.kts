@@ -56,6 +56,8 @@ publishing {
 
   publications {
     create<MavenPublication>("maven") {
+      artifactId = "smartlook-crash-gradle-plugin"
+      from(components["java"])
       pom {
         name.set("smartlook-crash-gradle-plugin")
         description.set("The Smartlook Crash Gradle Plugin will automatically find the mappings of all your build types and upload them.")
@@ -87,5 +89,5 @@ publishing {
 }
 
 signing {
-  sign(configurations.archives.get())
+  sign(publishing.publications["maven"])
 }

@@ -10,3 +10,5 @@ gradle.properties
 
 # misc
 .DS_Store
+*.gpg
+*.pub
