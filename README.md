@@ -61,7 +61,7 @@ The plugin can be developed and tested locally by running the following command 
 gradle publishToMavenLocal
 ```
 
-To install the plugin locally, scaffold a basic Android application and in the top-level (root) `build.gradle` file, make sure you include mavenLocal() as one of the sources for the dependency repositories:
+To install the plugin locally, scaffold a basic Android application and in the top-level (root) `settings.gradle` file, make sure you include mavenLocal() as one of the sources for the dependency repositories:
 
 ```groovy
 // Top-level build file or gradle settings file where you can add configuration options common to all sub-projects/modules.
