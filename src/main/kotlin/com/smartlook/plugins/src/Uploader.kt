@@ -8,13 +8,14 @@ import java.net.URL
 import java.nio.file.Files
 
 // Source: https://stackoverflow.com/questions/2469451/upload-files-from-java-client-to-a-http-server
-fun uploadFile(apiKey: String, appVersion: String, platform: String, file: File, force: Boolean) {
+fun uploadFile(apiKey: String, bundleId: String, appVersion: String, platform: String, file: File, force: Boolean) {
     val charset = "UTF-8"
     // encode the appVersion for URL string sanitation
     val encodedAppVersion = java.net.URLEncoder.encode(appVersion, charset)
+    val encodedBundleId = java.net.URLEncoder.encode(bundleId, charset)
     val boundary = java.lang.Long.toHexString(System.currentTimeMillis()) // Just generate some unique random value.
     val CRLF = "\r\n" // Line separator required by multipart/form-data.
-    val connection = URL("https://api.smartlook.cloud/api/v1/releases/$encodedAppVersion/platforms/$platform/mapping-files?force=$force").openConnection()
+    val connection = URL("https://api.smartlook.cloud/api/v1/bundles/$encodedBundleId/platforms/$platform/releases/$encodedAppVersion/mapping-files?force=$force").openConnection()
 
     connection.doOutput = true
     connection.setRequestProperty("Content-Type", "multipart/form-data; boundary=$boundary")

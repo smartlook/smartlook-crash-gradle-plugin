@@ -34,6 +34,7 @@ class SmartlookUploadPlugin : Plugin<Project> {
                     val appVariantName = applicationVariant.name
                     val minifiedEnabled = applicationVariant.buildType.isMinifyEnabled
                     val versionName = applicationVariant.versionName
+                    val bundleId = applicationVariant.applicationId
 
                     println("> Smartlook Plugin: App variant: $appVariantName, minifyEnabled: $minifiedEnabled")
 
@@ -46,7 +47,8 @@ class SmartlookUploadPlugin : Plugin<Project> {
                             "uploadTask${appVariantName.capitalize()}",
                             UploadTask::class.java,
                             mappings.files.first(),
-                            versionName
+                            versionName,
+                            bundleId
                         )
 
                         tasks.forEach { task ->
@@ -65,12 +67,12 @@ class SmartlookUploadPlugin : Plugin<Project> {
     }
 }
 
-open class UploadTask @Inject constructor(@InputFile val inputFile: File, private val versionName: String) : DefaultTask() {
+open class UploadTask @Inject constructor(@InputFile val inputFile: File, private val versionName: String, private val bundleId: String) : DefaultTask() {
     @TaskAction
     fun execute() {
         val extension = project.extensions.findByName(EXTENSION_NAME) as SmartlookUploadPluginConfig
         val platform = "android"
         println("> Smartlook Plugin: Uploading ${inputFile.path} to Smartlook Crash API")
-        uploadFile(extension.apiKey.get(), versionName, platform, inputFile, extension.force.get())
+        uploadFile(extension.apiKey.get(), bundleId, versionName, platform, inputFile, extension.force.get())
     }
 }
